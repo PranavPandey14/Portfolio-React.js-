@@ -15,9 +15,9 @@ const HeroSection = () => {
           <Button className={Styles.contactButton} size="md">
             <Link to="contact" offset={-50} smooth={true} duration={500}>Contact Me</Link>
           </Button>
-          <Button className={`${Styles.workButton} mx-2`} size="md">
-            <a href="/public/assets/resume/PranavPandeyResume.pdf" download>Download Resume</a>
-          </Button>
+          {/* <Button className={`${Styles.workButton} mx-2`} size="md"> */}
+            <a className={`${Styles.workButton} mx-2`} href="/assets/resume/PranavPandeyResume.pdf" download>Download Resume</a>
+          {/* </Button> */}
         </Col>
 
         {/* Right side: Image */}

@@ -20,17 +20,21 @@
 
 .workButton {
   color: #008080 !important;
-  border-color: #008080 !important;
+  border: 1px solid #008080;
+  padding: 9px 4px 9px 4px;
+  border-radius: 5px;
   background-color: #ffffff !important;
   text-decoration: none !important;
+
 }
 
-.workButton a {
+/* .workButton a{
   color: #008080 !important;
   border-color: #008080 !important;
   background-color: #ffffff !important;
   text-decoration: none !important;
-}
+
+} */
 
 
 @media (max-width: 768px) {
