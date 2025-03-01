@@ -1,0 +1,49 @@
+.contactButton {
+  background-color: #008080 !important;
+  border: none !important;
+  text-decoration: none !important;
+  /* Remove link style */
+}
+
+.contactButton:hover {
+  background-color: #006666 !important;
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 700;
+}
+
+.highlightedText {
+  color: #008080;
+}
+
+.workButton {
+  color: #008080 !important;
+  border-color: #008080 !important;
+  background-color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.workButton a {
+  color: #008080 !important;
+  border-color: #008080 !important;
+  background-color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+
+@media (max-width: 768px) {
+  .heroSectionText {
+    order: 2;
+  }
+
+  .heroSectionImage {
+    order: 1;
+  }
+}
+
+.downloadResumeBtn {
+  text-decoration: none;
+  color: #008080;
+}

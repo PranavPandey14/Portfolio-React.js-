@@ -1,0 +1,8 @@
+.topbarItems{
+cursor: pointer;
+color: #ffff;
+}
+
+.topbarItems :hover{
+    color: #008080;
+}

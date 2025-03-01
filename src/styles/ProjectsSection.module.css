@@ -1,0 +1,92 @@
+.projectsSection {
+  padding: 40px 20px;
+}
+
+.projectsHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.projectsCategory {
+  margin-bottom: 40px;
+}
+
+.categoryHeading {
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.projectItem {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.projectLink {
+  text-decoration: none;
+}
+
+.projectImageContainer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.projectName {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.projectDescription {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.projectInfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centers the button horizontally */
+  align-items: center;      /* Aligns text and button vertically if needed */
+}
+
+.ctaButton {
+  background-color: #008080; /* Teal color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Optional: Adds spacing above the button */
+}
+
+.ctaButton:hover {
+  background-color: #049484; /* Darker teal for hover effect */
+}

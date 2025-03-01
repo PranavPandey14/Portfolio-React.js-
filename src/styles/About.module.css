@@ -1,0 +1,155 @@
+/* General Styles for the About Section */
+.aboutSection {
+    background-color: #f9f9f9;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.aboutTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+.aboutText {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.aboutCard {
+    border-radius: 15px 0px 15px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.aboutCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardIcon {
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+.aboutCardTitle {
+    font-weight: 500;
+    color: #333;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.aboutCard:hover .cardIcon {
+    transform: scale(1.1);
+}
+
+/* Experience List */
+.experienceList {
+    margin-top: 20px;
+}
+
+.experienceList .list-group-item {
+    background-color: #fff;
+    border: none;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.experienceList .list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+.experienceList h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.experienceList p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Badge Styles */
+.badge {
+    font-size: 1rem;
+    padding: 0.6em 1em;
+    background-color: #008080 !important
+}
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .about-card {
+        margin-bottom: 20px;
+    }
+
+    .aboutHeader {
+        font-size: 1.7rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.3rem;
+    }
+
+    .aboutCardTitle {
+        font-size: 1rem;
+    }
+
+    .aboutText {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* Marquee container */
+.marqueeContainer {
+    overflow: hidden;
+    border-radius: 8px; /* Optional border radius */
+}
+
+/* Marquee content that will be scrolled */
+.marqueeContent {
+    display: flex;
+    animation: marquee 10s linear infinite;
+}
+
+.techItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.techItem p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Keyframe animation to move the items from right to left */
+@keyframes marquee {
+    0% {
+        transform: translateX(0); /* Start at the initial position */
+    }
+    100% {
+        transform: translateX(-50%); /* Move the entire content to the left */
+    }
+}
