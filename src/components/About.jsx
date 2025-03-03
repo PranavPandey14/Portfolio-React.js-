@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Row, Col, ListGroup, Badge } from 'react-bootstrap';
 import { FaReact, FaNode, FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaGithub } from 'react-icons/fa';
 import { SiNextdotjs, SiMongodb, SiPostman, SiExpress, SiJira } from 'react-icons/si';
+import ReactMultiCarousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';  // Import carousel styles
 import Styles from '../styles/About.module.css'; // Custom styles
 
 const About = () => {
@@ -20,6 +22,26 @@ const About = () => {
         { icon: <SiJira size={70} color="#0052CC" />, name: 'Jira' },
     ];
 
+    const responsive = {
+        superLargeDesktop: {
+            // Specify breakpoints and how many items you want to show at those breakpoints
+            breakpoint: { max: 4000, min: 1024 },
+            items: 6
+        },
+        desktop: {
+            breakpoint: { max: 1024, min: 768 },
+            items: 4
+        },
+        tablet: {
+            breakpoint: { max: 768, min: 464 },
+            items: 3
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 2
+        }
+    };
+
     return (
         <section id="about" className={`${Styles.aboutSection} py-5`}>
             <Container>
@@ -36,19 +58,22 @@ const About = () => {
 
                         {/* Skills & Technologies Section */}
                         <h4 className={`${Styles.sectionTitle} mt-4`}>Skills & Technologies</h4>
-
-                        {/* Marquee Container */}
-                        <div className={`${Styles.marqueeContainer} py-3`}>
-                            <div className={`${Styles.marqueeContent}`}>
-                                {/* Combined mapping for seamless loop */}
-                                {[...technologies, ...technologies].map((tech, index) => (
-                                    <div className={Styles.techItem} key={index}>
+                        <ReactMultiCarousel
+                            responsive={responsive}
+                            infinite={true}
+                            arrows={false}
+                            autoPlay={true}
+                            autoPlaySpeed={2000}
+                        >
+                            {technologies.map((tech, index) => (
+                                <div key={index} className="text-center">
+                                    <div className="mb-3">
                                         {tech.icon}
-                                        <p>{tech.name}</p>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
+                                    <p>{tech.name}</p>
+                                </div>
+                            ))}
+                        </ReactMultiCarousel>
 
                         {/* Experience Section */}
                         <h4 className={`${Styles.sectionTitle} mt-4`}>Experience & Achievements</h4>

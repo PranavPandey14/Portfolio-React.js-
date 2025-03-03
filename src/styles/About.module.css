@@ -116,40 +116,7 @@
 }
 
 
-
-
-/* Marquee container */
-.marqueeContainer {
-    overflow: hidden;
-    border-radius: 8px; /* Optional border radius */
-}
-
-/* Marquee content that will be scrolled */
-.marqueeContent {
-    display: flex;
-    animation: marquee 10s linear infinite;
-}
-
-.techItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    margin: 0 15px;
-    text-align: center;
-}
-
-.techItem p {
-    margin-top: 8px;
-    font-size: 14px;
-}
-
-/* Keyframe animation to move the items from right to left */
-@keyframes marquee {
-    0% {
-        transform: translateX(0); /* Start at the initial position */
-    }
-    100% {
-        transform: translateX(-50%); /* Move the entire content to the left */
-    }
-}
+.carousel .react-multicarousel-item {
+    transition: transform 0.5s ease-in-out;
+  }
+  
