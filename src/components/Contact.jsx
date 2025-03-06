@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from '../styles/Contact.module.css'; // Importing the module CSS
 import { SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 import axios from 'axios'; // Import Axios
-import { Oval } from 'react-loader-spinner'; // Import the loader spinner
+import { Spinner } from "react-bootstrap";
 import Swal from 'sweetalert2'; // Import Swal for notifications
 
 const Contact = () => {
@@ -11,7 +11,7 @@ const Contact = () => {
     email: "",
     message: ""
   });
-  const [isSubmit, setIsSubmit] = useState(false); // For controlling submission state (loading or success)
+  const [isSubmitting, setIsSubmitting] = useState(false); // For controlling submission state (loading or success)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,7 +23,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmit(true); // Set loading state
+    setIsSubmitting(true); // Set loading state
 
     try {
       // Create FormData object
@@ -40,7 +40,7 @@ const Contact = () => {
       });
 
       console.log('Success:', response.data); // Handle successful response
-      setIsSubmit(false); // Reset loading state
+      setIsSubmitting(false); // Reset loading state
 
       // Success notification
       Swal.fire({
@@ -59,7 +59,7 @@ const Contact = () => {
 
     } catch (error) {
       console.error('Error:', error); // Handle error
-      setIsSubmit(false); // Reset loading state
+      setIsSubmitting(false); // Reset loading state
 
       // Error notification
       Swal.fire({
@@ -107,15 +107,12 @@ const Contact = () => {
               required
             />
           </div>
-          <button type="submit" className={styles.submitBtn} disabled={isSubmit}>
-            {isSubmit ? (
-              <Oval
-                height={24}
-                width={24}
-                color="#ffffff"
-                secondaryColor="#ffffff"
-                ariaLabel='loading'
-              />
+          <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+            {isSubmitting ? (
+              <div className="d-flex justify-content-center">
+                Sending
+                <Spinner className="mt-1 mx-2" size="sm" />
+              </div>
             ) : (
               'Send Message'
             )}
